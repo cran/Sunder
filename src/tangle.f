@@ -6,6 +6,8 @@
      &     zprop,Sigmacur,Sigmaprop,Uchol,am,bdm,bem,gm,dm,zeta,fsav,ud,
      &     zsav,swi)
       implicit none
+*     computing options
+      integer nit,thinning, swi
 *     data 
       integer nsite,nloc,nal,nalmax,g
       double precision s,DG,DE
@@ -17,8 +19,6 @@
       dimension theta(5,nit/thinning),thetacur(5),thetaprop(5),
      & zeta(5,nit/thinning), fsav(nit/thinning,nsite,nloc,nalmax),
      & zsav(nit/thinning,nsite,nloc,nalmax)
-*     computing options
-      integer nit,thinning, swi
 *     hidden variables
       double precision fcur,fprop,xcur,xprop,ycur,yprop,zcur,zprop,
      &     Sigmacur,Sigmaprop,Uchol
