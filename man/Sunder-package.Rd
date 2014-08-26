@@ -4,25 +4,22 @@
 \docType{package}
 \title{Inference and model selection for analysis of geographical
   genetic variation}
-\description{MCMC inference and model selection by cross-validation for the analysis of geographical  genetic variation}
-\details{
-\tabular{ll}{
-Package: \tab Sunder\cr
-Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2014-06-20\cr
-License: \tab What license is it under?\cr
-}
-Simulation, MCMC inference and model selection by cross-validation for the analysis
-of geographical  genetic variation
+\description{Data simulation, inference and model selection by cross-validation for the analysis of geographical  genetic variation}
 
-}
-\author{Filippo Botta and Gilles Guilllot
-
-Maintainer: Filippo Botta  <filippo.botta@gmail.com>
+\author{Filippo Botta, Casper Eriksen and Gilles Guilllot
+  Maintainer: Filippo Botta  <filippo.botta@gmail.com>
 }
 \references{Cf. \code{citation(Sunder)}}
 
 \keyword{ package }
-%\seealso{}
-%\examples{}
+
+\details{
+\tabular{ll}{
+  Package: \tab Sunder\cr
+  Type: \tab Package\cr
+Version: \tab 0.0.3 \cr
+Date: \tab Tue Aug 26 11:59:28 2014 \cr
+License: \tab GPL \cr
+}
+Simulation, inference and model selection by cross-validation for the analysis of geographical  genetic variation
+}

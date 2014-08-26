@@ -4,10 +4,10 @@
       subroutine tangle (nsite,nloc,nal,nalmax,g,DG,DE,theta,thetacur,
      &     thetaprop,nit,thinning,fcur,fprop,xcur,xprop,ycur,yprop,zcur,
      &     zprop,Sigmacur,Sigmaprop,Uchol,am,bdm,bem,gm,dm,zeta,fsav,ud,
-     &     zsav,swi)
+     &     zsav,swi,ppct)
       implicit none
 *     computing options
-      integer nit,thinning, swi
+      integer nit,thinning, swi,ppct
 *     data 
       integer nsite,nloc,nal,nalmax,g
       double precision s,DG,DE
@@ -30,7 +30,7 @@
      &     Uchol(nsite,nsite)
 *     local variables
       integer iit,fracnit,i,j,wit, isite, iloc, ial,ud
-      double precision ka, to
+      double precision ka, to,pct
       dimension ud(5),ka(5)
 !     call intpr('************************************',-1,0,0)
 !     call intpr('***  Entering Fortran program    ***',-1,0,0)
@@ -63,8 +63,13 @@
 
 
       do iit = 1,nit
-
-*     storing outputof current iteration into MCMC storage array
+         if(ppct .eq. 1) then
+            if(mod(iit,thinning) .eq. 0) then
+               pct = dble(iit)/dble(nit)*100.
+               call dblepr('% of computations ',-1,pct,1)
+            endif
+         endif
+*     storing output of current iteration into MCMC storage array
          if(mod(iit,thinning) .eq. 0) then 
             do i=1,5
                theta (i,wit) = thetacur(i)

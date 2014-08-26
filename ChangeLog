@@ -1,5 +1,5 @@
 	-----------------------------------
-	Changes 0.0.0 to 0.0.1
+	Changes 0.0.1 to 0.0.2
 	-----------------------------------
 
 	
@@ -13,9 +13,21 @@
 ******************************
 *   In R
 ******************************
-	Update of Filippo's functions
-	Include now Casper's functions
+	SunderInference.R: 
+	- beta_G and beta_E now rescaled at the end
+	- Output array theta have dimnames 
+	- Updated example in SunderInference.Rd
+	- mod.lik initialized with NA instead of -Inf
+	- default values set for theta.max and theta.init
 
+	SimSunderData.R:
+	- no longer calls GaussRF (no need to load RandomFields)
+
+	SunderInferenceGauss.R:
+
+	Dependence to mnormt added
+	Dependence to RandomFields removed
+	
 	
 ******************************
 *   In Rd
@@ -25,8 +37,9 @@
 ************************************
 *   In Fortran
 ************************************
-	Updated version of Filippo's program
-	
+	- Using fortran code from version 0.0.2 with correct order for
+	declaration/dimension
+	- Printing percentage of computations achieved
 ************************************
 *   In C
 ************************************	

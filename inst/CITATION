@@ -1,0 +1,48 @@
+citHeader("To cite package 'Sunder' in publications use:")
+
+desc <- packageDescription("Sunder")
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", desc$Date)
+vers <- paste("R package version", desc$Version)
+
+citEntry(entry="Article",
+         author = 	 "Bradburd, G.S. and Ralph, P.L. and Coop, G.M.",
+         title = 	 "Disentangling the effects of geographic and ecological isolation on genetic differentiation",
+         journal = 	 "Evolution",
+         year = 	 2013,
+         volume =	 67,
+         number =	 11,
+         pages="3258-3273",
+         textVersion ="G.S. Bradburd, P.L. Ralph, and G.M. Coop.
+Disentangling the effects of geographic and ecological isolation on genetic differentiation.
+Evolution, 67(11):3258-3273, 2013")
+
+
+citEntry(entry="Article",
+         author = 	 "Botta,F. and Eriksen, C. and Fontaine, M. and Guillot, G.",
+         title = 	 "Enhanced computational methods for quantifying the effect of geographic and environmental isolation on genetic differentiation.",
+         journal = 	 "arXiv",
+         year = 	 2014,
+         textVersion ="F. Botta, C. Eriksen, M. Fontaine and G. Guillot.
+Enhanced computational methods for quantifying the effect of geographic and environmental isolation on genetic differentiation. 2014")
+
+
+citEntry(entry="Article",
+         author = 	 "Guillot G., R. Schilling, E. Porcu, M. Bevilacqua",
+         title = 	 "Validity of covariance models for the analysis of geographical variation",
+         journal = 	 "Methods in Ecology and Evolution ",
+         year = 	 2014,
+         volume =	 5,
+         number =	 4,
+         pages="329-335",
+         textVersion ="Guillot G., R. Schilling, E. Porcu, M. Bevilacqua Validity of covariance models for the analysis of geographical variation. Methods in Ecology and Evolution Volume 5, Issue 4, pages 329-335, April 2014.")
+
+citEntry(entry="Article",
+         author = 	 "Guillot, G. and Rousset, F.",
+         title = 	 " Dismantling the Mantel tests",
+         journal = 	 "Methods in Ecology and Evolutio",
+         year = 	 2014,
+         volume =	 4,
+         number =	 4,
+         pages="336-344",
+         textVersion ="Guillot G. and F. Rousset. Dismantling the Mantel tests. Methods in Ecology and Evolution. 4(4), 336-344, 2013")
+

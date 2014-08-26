@@ -1,6 +1,6 @@
 SimSunderData <-
-function (mod, theta, nsite, nloc, nind, nalM, nalm, var.par, 
-    scale.par) 
+function (mod, theta, nsite, nloc, hap.pop.size, nalM, nalm, 
+    var.par, scale.par) 
 {
     alpha <- theta[1]
     beta_G <- theta[2]
@@ -8,11 +8,12 @@ function (mod, theta, nsite, nloc, nind, nalM, nalm, var.par,
     gamma <- theta[4]
     delta <- theta[5]
     s <- matrix(nrow = nsite, ncol = 2, runif(2 * nsite))
-    e <- GaussRF(x = s[, 1], y = s[, 2], grid = F, model = "expo", 
-        param = c(0, var.par, 0, scale.par), n = 1)
+    D_G <- as.matrix(dist(s))
+    Cov.e <- sqrt(var.par) * exp(-D_G/scale.par)
+    L = t(chol(Cov.e))
+    e <- L %*% matrix(ncol = 1, rnorm(nsite))
     e <- matrix(e)
     D_E <- as.matrix(dist(e))
-    D_G <- as.matrix(dist(s))
     if (mod == "G+E") 
         base = D_G/beta_G + D_E/beta_E
     else if (mod == "G") 
@@ -21,7 +22,7 @@ function (mod, theta, nsite, nloc, nind, nalM, nalm, var.par,
         base = D_E/beta_E
     Cov <- (1 - delta) * exp(-(base)^gamma) + delta * diag(nsite)
     theta = c(alpha, beta_G, beta_E, gamma, delta)
-    pop = matrix(nrow = nsite, ncol = nloc, data = nind)
+    pop = matrix(nrow = nsite, ncol = nloc, data = hap.pop.size)
     if (nalM == 2) 
         nal <- rep(2, nloc)
     else nal <- sample(x = nalm:nalM, size = nloc, replace = TRUE)
@@ -29,7 +30,6 @@ function (mod, theta, nsite, nloc, nind, nalM, nalm, var.par,
     f = x = y = gen = array(dim = mdim)
     L = t(chol(Cov))
     z <- array(dim = mdim, rnorm(n = prod(mdim)))
-    zcur = z + array(dim = mdim, runif(n = prod(mdim)) - 0.5)
     for (a in 1:nalM) {
         y[, , a] = L %*% z[, , a]
     }
@@ -49,7 +49,7 @@ function (mod, theta, nsite, nloc, nind, nalM, nalm, var.par,
                 iloc], prob = f[isite, iloc, ])
         }
     }
-    output <- list(gen = gen, D_G = D_G, D_E = D_E, mod = mod, 
-        theta = theta)
+    output <- list(gen = gen, e = e, s = s, D_G = D_G, D_E = D_E, 
+        mod = mod, theta = theta)
     return(output)
 }
