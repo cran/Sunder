@@ -17,8 +17,8 @@
 \tabular{ll}{
   Package: \tab Sunder\cr
   Type: \tab Package\cr
-Version: \tab 0.0.3 \cr
-Date: \tab Tue Aug 26 11:59:28 2014 \cr
+Version: \tab 0.0.4 \cr
+Date: \tab Mon Jan 12 19:54:04 2015 \cr
 License: \tab GPL \cr
 }
 Simulation, inference and model selection by cross-validation for the analysis of geographical  genetic variation

@@ -6,10 +6,10 @@ Description: Quantification of the effect of geographic versus environmental iso
 Maintainer: Filippo Botta  <filippo.botta@gmail.com>
 URL: http://www2.imm.dtu.dk/~gigu/Sunder
 License: GPL
-Version: 0.0.3
-Date: Tue Aug 26 11:59:28 2014
+Version: 0.0.4
+Date: Mon Jan 12 19:54:04 2015
 Depends: mnormt
-Packaged: 2014-08-26 10:00:04 UTC; gilles
+Packaged: 2015-01-12 18:54:17 UTC; gigu
 NeedsCompilation: yes
 Repository: CRAN
-Date/Publication: 2014-08-26 13:45:34
+Date/Publication: 2015-01-13 10:27:07

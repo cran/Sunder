@@ -1,5 +1,5 @@
 	-----------------------------------
-	Changes 0.0.1 to 0.0.2
+	Changes 0.0.3 to 0.0.4
 	-----------------------------------
 
 	
@@ -13,20 +13,14 @@
 ******************************
 *   In R
 ******************************
-	SunderInference.R: 
-	- beta_G and beta_E now rescaled at the end
-	- Output array theta have dimnames 
-	- Updated example in SunderInference.Rd
-	- mod.lik initialized with NA instead of -Inf
-	- default values set for theta.max and theta.init
+	In CITATION.R
+## desc <- packageDescription("Sunder")
+## year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", desc$Date)
+## vers <- paste("R package version", desc$Version)
 
-	SimSunderData.R:
-	- no longer calls GaussRF (no need to load RandomFields)
 
-	SunderInferenceGauss.R:
-
-	Dependence to mnormt added
-	Dependence to RandomFields removed
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("R package version", meta$Version)
 	
 	
 ******************************
@@ -37,9 +31,7 @@
 ************************************
 *   In Fortran
 ************************************
-	- Using fortran code from version 0.0.2 with correct order for
-	declaration/dimension
-	- Printing percentage of computations achieved
+
 ************************************
 *   In C
 ************************************	

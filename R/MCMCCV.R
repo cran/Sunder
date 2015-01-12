@@ -62,9 +62,9 @@ function (gen, D_G, D_E, nit, thinning, theta.max = c(10, 100 *
                 cat("Computations for model 'envi'\n\n")
                 ud[2] = 0
             })
-            res <- .Fortran("tangle", as.integer(nsite), as.integer(nloc), 
-                as.integer(nal), as.integer(nalM), as.integer(gen_tr), 
-                as.double(D_G_scaled), as.double(D_E_scaled), 
+            res <- .Fortran("tangle", PACKAGE = "Sunder", as.integer(nsite), 
+                as.integer(nloc), as.integer(nal), as.integer(nalM), 
+                as.integer(gen_tr), as.double(D_G_scaled), as.double(D_E_scaled), 
                 as.double(thma), as.double(theta.init), as.double(thetaprop), 
                 as.integer(nit), as.integer(thinning), as.double(fcur), 
                 as.double(fprop), as.double(xcur), as.double(xprop), 

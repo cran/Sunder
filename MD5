@@ -1,13 +1,13 @@
-418f29bbc98a2853ebf5fe25303c17ea *ChangeLog
-07f28b53f42bedbc125e1b9024d9540b *DESCRIPTION
+c27c75e82b508ed3bd4861479b62a78c *ChangeLog
+655035edb8a16c4620d715c51da45499 *DESCRIPTION
 0cc3ce2a7df7c89ed570b69b70ee9bfe *NAMESPACE
-3841eaeb62ce9fcb8c8744a312cceb6c *R/MCMCCV.R
+e2499e9851438e597255013c7df26ad6 *R/MCMCCV.R
 520c9db462a084dac56563df684c85b6 *R/MLCVGauss.R
 6c5ee5a70ad5fb03da7d1bab48c67789 *R/Reformat23.R
 329ca4d0983cb6ace64610307b856b9b *R/Reformat32.R
 19dcade52d7b4cffd760183925528179 *R/SimSunderData.R
 481c2c9271cb78d2a39202c399487407 *data/toydata.RData
-23ec0beaaaadfe3d2711cc7de70b1ad9 *inst/CITATION
+e85c45d8d1b80ca5384f5ffd5a27c718 *inst/CITATION
 d133dd4be9a4a9dd7290e8e73afbe1ad *man/D_E.Rd
 7b8779622d5d08a220f8c3f7414f7907 *man/D_G.Rd
 d17280b255c9485dafb3b9e99fe920e2 *man/MCMCCV.Rd
@@ -15,7 +15,7 @@ d17280b255c9485dafb3b9e99fe920e2 *man/MCMCCV.Rd
 f0d77c8241ec6c71e04df293384fee60 *man/Reformat23.Rd
 25a1a13d983c0317ad866ebafbaeda38 *man/Reformat32.Rd
 e098d4e0ea2713f2411b00a2a30e8dc2 *man/SimSunderData.Rd
-f20398d698381deb4d671db2417a5c76 *man/Sunder-package.Rd
+a1b8f8bed0b0e9585e4ed73be64920be *man/Sunder-package.Rd
 e15910ebe7e655d4c6401b633785e3fe *man/gen.Rd
 e319448c842d9b55c9549499dff11b45 *src/tangle.f
 aaa9beb51ac0ce956e26f0c774e83601 *src/wrap.c
